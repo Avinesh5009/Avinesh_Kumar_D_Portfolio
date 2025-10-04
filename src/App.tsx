@@ -139,6 +139,7 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
             <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent">
+            <div className="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
               Avinesh Kumar D
             </div>
             
@@ -150,8 +151,8 @@ function App() {
                   onClick={() => scrollToSection(item.id)}
                   className={`text-sm font-medium transition-colors duration-200 ${
                     activeSection === item.id
-                      ? 'text-blue-600'
-                      : 'text-gray-600 hover:text-blue-600'
+                      ? 'text-indigo-600'
+                      : 'text-gray-600 hover:text-indigo-600'
                   }`}
                 >
                   {item.label}
@@ -176,7 +177,7 @@ function App() {
                   <button
                     key={item.id}
                     onClick={() => scrollToSection(item.id)}
-                    className="block w-full text-left px-3 py-2 text-base font-medium text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-md"
+                    className="block w-full text-left px-3 py-2 text-base font-medium text-gray-600 hover:text-indigo-600 hover:bg-gray-50 rounded-md"
                   >
                     {item.label}
                   </button>
@@ -188,11 +189,11 @@ function App() {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="pt-20 pb-16 bg-gradient-to-br from-blue-50 to-teal-50">
+      <section id="home" className="pt-20 pb-16 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <div className="mb-8">
-              <div className="w-32 h-32 mx-auto mb-6 bg-gradient-to-br from-blue-600 to-teal-600 rounded-full flex items-center justify-center">
+              <div className="w-32 h-32 mx-auto mb-6 bg-gradient-to-br from-indigo-600 via-purple-600 to-blue-600 rounded-full flex items-center justify-center shadow-xl">
                 <User size={64} className="text-white" />
               </div>
               <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-4">
@@ -208,14 +209,14 @@ function App() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
                   onClick={() => scrollToSection('projects')}
-                  className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors duration-200"
+                  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-medium rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl"
                 >
                   View My Work
                   <ChevronRight size={20} className="ml-2" />
                 </button>
                 <button
                   onClick={() => scrollToSection('contact')}
-                  className="inline-flex items-center px-6 py-3 border-2 border-blue-600 text-blue-600 font-medium rounded-lg hover:bg-blue-600 hover:text-white transition-colors duration-200"
+                  className="inline-flex items-center px-6 py-3 border-2 border-indigo-600 text-indigo-600 font-medium rounded-lg hover:bg-indigo-600 hover:text-white transition-colors duration-200"
                 >
                   <Download size={20} className="mr-2" />
                   Download Resume
@@ -229,65 +230,170 @@ function App() {
       {/* About Section */}
       <section id="about" className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">About Me</h2>
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div>
-                <div className="w-full h-64 bg-gradient-to-br from-blue-100 to-teal-100 rounded-lg flex items-center justify-center">
-                  <Code size={80} className="text-blue-600" />
-                </div>
-              </div>
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-16">About Me</h2>
+          
+          {/* Main About Content */}
+          <div className="max-w-6xl mx-auto mb-16">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              {/* Left Column - Visual Elements */}
               <div className="space-y-6">
-                <p className="text-lg text-gray-600 leading-relaxed">
-                  I am a dedicated Information Technology student with a strong foundation in programming 
-                  and software development. Currently in my third year at Adhiparasakthi Engineering College, 
-                  I am passionate about leveraging technology to solve real-world problems.
-                </p>
-                <p className="text-lg text-gray-600 leading-relaxed">
-                  My journey in IT has equipped me with expertise in multiple programming languages and 
-                  modern web technologies. I thrive in collaborative environments and am always eager to 
-                  learn new technologies and take on challenging projects.
-                </p>
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="bg-blue-50 p-4 rounded-lg">
-                    <h4 className="font-semibold text-blue-600 mb-2">Problem Solving</h4>
-                    <p className="text-sm text-gray-600">Analytical approach to complex challenges</p>
+                <div className="relative">
+                  <div className="w-full h-80 bg-gradient-to-br from-indigo-100 via-purple-50 to-blue-100 rounded-2xl flex items-center justify-center relative overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/10 to-purple-500/10"></div>
+                    <div className="relative z-10 flex flex-col items-center">
+                      <Code size={80} className="text-indigo-600 mb-4" />
+                      <div className="text-center">
+                        <p className="text-lg font-semibold text-gray-700">Passionate Developer</p>
+                        <p className="text-sm text-gray-500">Building Tomorrow's Solutions</p>
+                      </div>
+                    </div>
+                    {/* Decorative Elements */}
+                    <div className="absolute top-4 right-4 w-16 h-16 bg-indigo-200/30 rounded-full"></div>
+                    <div className="absolute bottom-6 left-6 w-12 h-12 bg-purple-200/30 rounded-full"></div>
+                    <div className="absolute top-1/2 left-4 w-8 h-8 bg-blue-200/30 rounded-full"></div>
                   </div>
-                  <div className="bg-teal-50 p-4 rounded-lg">
-                    <h4 className="font-semibold text-teal-600 mb-2">Team Collaboration</h4>
-                    <p className="text-sm text-gray-600">Effective communication and teamwork</p>
+                </div>
+                
+                {/* Stats Cards */}
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="bg-gradient-to-br from-indigo-50 to-indigo-100 p-4 rounded-xl text-center">
+                    <div className="text-2xl font-bold text-indigo-600">3+</div>
+                    <div className="text-sm text-gray-600">Years Learning</div>
                   </div>
-                  <div className="bg-blue-50 p-4 rounded-lg">
-                    <h4 className="font-semibold text-blue-600 mb-2">Adaptability</h4>
-                    <p className="text-sm text-gray-600">Quick to learn new technologies</p>
+                  <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-4 rounded-xl text-center">
+                    <div className="text-2xl font-bold text-purple-600">10+</div>
+                    <div className="text-sm text-gray-600">Projects Built</div>
                   </div>
-                  <div className="bg-teal-50 p-4 rounded-lg">
-                    <h4 className="font-semibold text-teal-600 mb-2">Leadership</h4>
-                    <p className="text-sm text-gray-600">Initiative in project management</p>
+                  <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-4 rounded-xl text-center">
+                    <div className="text-2xl font-bold text-blue-600">5+</div>
+                    <div className="text-sm text-gray-600">Technologies</div>
                   </div>
                 </div>
               </div>
+              
+              {/* Right Column - Content */}
+              <div className="space-y-8">
+                <div className="space-y-6">
+                  <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-indigo-100 to-purple-100 rounded-full">
+                    <span className="text-sm font-medium text-indigo-700">👋 Hello, I'm Avinesh</span>
+                  </div>
+                  
+                  <h3 className="text-2xl font-bold text-gray-900 leading-tight">
+                    Transforming Ideas into Digital Reality Through Code
+                  </h3>
+                  
+                  <p className="text-lg text-gray-600 leading-relaxed">
+                    I'm a passionate Information Technology student in my third year at Adhiparasakthi Engineering College, 
+                    driven by the endless possibilities that technology offers to solve real-world challenges.
+                  </p>
+                  
+                  <p className="text-lg text-gray-600 leading-relaxed">
+                    My journey in software development has been fueled by curiosity and a commitment to continuous learning. 
+                    I specialize in full-stack development, with expertise spanning from backend systems to intuitive user interfaces.
+                  </p>
+                </div>
+                
+                {/* Key Highlights */}
+                <div className="space-y-4">
+                  <h4 className="text-lg font-semibold text-gray-900">What Drives Me</h4>
+                  <div className="space-y-3">
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-indigo-500 rounded-full mt-2 flex-shrink-0"></div>
+                      <p className="text-gray-600">Building scalable solutions that make a meaningful impact</p>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
+                      <p className="text-gray-600">Collaborating with teams to bring innovative ideas to life</p>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                      <p className="text-gray-600">Staying at the forefront of emerging technologies and best practices</p>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* CTA Button */}
+                <div className="pt-4">
+                  <button
+                    onClick={() => scrollToSection('projects')}
+                    className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-medium rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl"
+                  >
+                    Explore My Work
+                    <ChevronRight size={18} className="ml-2" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          {/* Core Strengths Section */}
+          <div className="max-w-6xl mx-auto">
+            <h3 className="text-2xl font-bold text-center text-gray-900 mb-8">Core Strengths</h3>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="group bg-gradient-to-br from-indigo-50 to-indigo-100 p-6 rounded-xl hover:shadow-lg transition-all duration-200">
+                <div className="w-12 h-12 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-200">
+                  <Code size={24} className="text-white" />
+                </div>
+                <h4 className="font-semibold text-indigo-700 mb-2">Problem Solving</h4>
+                <p className="text-sm text-gray-600">Analytical approach to breaking down complex challenges into manageable solutions</p>
+              </div>
+              
+              <div className="group bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-xl hover:shadow-lg transition-all duration-200">
+                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-200">
+                  <User size={24} className="text-white" />
+                </div>
+                <h4 className="font-semibold text-purple-700 mb-2">Team Collaboration</h4>
+                <p className="text-sm text-gray-600">Effective communication and seamless integration within development teams</p>
+              </div>
+              
+              <div className="group bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl hover:shadow-lg transition-all duration-200">
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-200">
+                  <Globe size={24} className="text-white" />
+                </div>
+                <h4 className="font-semibold text-blue-700 mb-2">Adaptability</h4>
+                <p className="text-sm text-gray-600">Quick to embrace new technologies and adapt to evolving project requirements</p>
+              </div>
+              
+              <div className="group bg-gradient-to-br from-teal-50 to-teal-100 p-6 rounded-xl hover:shadow-lg transition-all duration-200">
+                <div className="w-12 h-12 bg-gradient-to-br from-teal-500 to-teal-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-200">
+                  <Award size={24} className="text-white" />
+                  </div>
+                <h4 className="font-semibold text-teal-700 mb-2">Leadership</h4>
+                <p className="text-sm text-gray-600">Natural initiative in guiding projects and mentoring fellow developers</p>
+              </div>
+            </div>
+          </div>
+          
+          {/* Personal Philosophy */}
+          <div className="max-w-4xl mx-auto mt-16 text-center">
+            <div className="bg-gradient-to-r from-indigo-50 via-purple-50 to-blue-50 p-8 rounded-2xl">
+              <blockquote className="text-xl italic text-gray-700 mb-4">
+                "Technology is not just about writing code—it's about crafting experiences, solving problems, and building bridges between ideas and reality."
+              </blockquote>
+              <div className="w-16 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto"></div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="py-16 bg-gray-50">
+      <section id="skills" className="py-16 bg-gradient-to-br from-slate-50 to-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Technical Skills</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {skills.map((skill) => {
               const IconComponent = skill.icon;
               return (
-                <div key={skill.name} className="bg-white p-6 rounded-lg shadow-sm border border-gray-200 hover:shadow-md transition-shadow duration-200">
+                <div key={skill.name} className="bg-white p-6 rounded-xl shadow-sm border border-gray-200 hover:shadow-lg transition-all duration-200 group">
                   <div className="flex items-center mb-4">
-                    <IconComponent size={24} className="text-blue-600 mr-3" />
+                    <div className="w-10 h-10 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center mr-3 group-hover:scale-110 transition-transform duration-200">
+                      <IconComponent size={20} className="text-white" />
+                    </div>
                     <h3 className="font-semibold text-gray-900">{skill.name}</h3>
                   </div>
                   <div className="w-full bg-gray-200 rounded-full h-2 mb-2">
                     <div
-                      className="bg-gradient-to-r from-blue-600 to-teal-600 h-2 rounded-full transition-all duration-1000 ease-out"
+                      className="bg-gradient-to-r from-indigo-500 to-purple-500 h-2 rounded-full transition-all duration-1000 ease-out"
                       style={{ width: `${skill.level}%` }}
                     ></div>
                   </div>
@@ -305,20 +411,21 @@ function App() {
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Featured Projects</h2>
           <div className="grid md:grid-cols-2 gap-8">
             {projects.map((project, index) => (
-              <div key={index} className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-200">
-                <div className="aspect-video bg-gray-100">
+              <div key={index} className="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group">
+                <div className="aspect-video bg-gradient-to-br from-indigo-100 to-purple-100 relative overflow-hidden">
                   <img 
                     src={project.image} 
                     alt={project.title}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{project.title}</h3>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-indigo-600 transition-colors duration-200">{project.title}</h3>
                   <p className="text-gray-600 mb-4">{project.description}</p>
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.technologies.map((tech) => (
-                      <span key={tech} className="px-3 py-1 bg-blue-100 text-blue-600 text-sm rounded-full">
+                      <span key={tech} className="px-3 py-1 bg-gradient-to-r from-indigo-100 to-purple-100 text-indigo-700 text-sm rounded-full font-medium">
                         {tech}
                       </span>
                     ))}
@@ -328,14 +435,14 @@ function App() {
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
+                      className="inline-flex items-center text-indigo-600 hover:text-indigo-700 font-medium transition-colors duration-200"
                     >
                       <Github size={16} className="mr-2" />
                       View Code
                     </a>
                     <a
                       href="#"
-                      className="inline-flex items-center text-teal-600 hover:text-teal-700 font-medium"
+                      className="inline-flex items-center text-purple-600 hover:text-purple-700 font-medium transition-colors duration-200"
                     >
                       <ExternalLink size={16} className="mr-2" />
                       Live Demo
@@ -349,44 +456,68 @@ function App() {
       </section>
 
       {/* Education Section */}
-      <section id="education" className="py-16 bg-gray-50">
+      <section id="education" className="py-16 bg-gradient-to-br from-slate-50 to-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Education</h2>
-          <div className="max-w-3xl mx-auto">
-            <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-200">
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-200 hover:shadow-lg transition-shadow duration-200">
               <div className="flex items-start">
-                <div className="flex-shrink-0 mr-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-teal-600 rounded-full flex items-center justify-center">
-                    <GraduationCap size={24} className="text-white" />
+                <div className="flex-shrink-0 mr-6">
+                  <div className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-xl flex items-center justify-center">
+                    <GraduationCap size={32} className="text-white" />
                   </div>
                 </div>
                 <div className="flex-grow">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  <h3 className="text-2xl font-semibold text-gray-900 mb-2">
                     Bachelor of Technology - Information Technology
                   </h3>
-                  <p className="text-lg text-blue-600 font-medium mb-2">
+                  <p className="text-lg text-indigo-600 font-medium mb-2">
                     Adhiparasakthi Engineering College
                   </p>
-                  <p className="text-gray-600 mb-4">
+                  <p className="text-gray-600 mb-6">
                     Currently in 3rd Year | Expected Graduation: 2026
                   </p>
-                  <div className="grid md:grid-cols-2 gap-4">
+                  <div className="grid md:grid-cols-2 gap-6">
                     <div>
-                      <h4 className="font-medium text-gray-900 mb-2">Relevant Coursework:</h4>
-                      <ul className="text-sm text-gray-600 space-y-1">
-                        <li>• Data Structures & Algorithms</li>
-                        <li>• Object-Oriented Programming</li>
-                        <li>• Database Management Systems</li>
-                        <li>• Web Technologies</li>
+                      <h4 className="font-medium text-gray-900 mb-3">Relevant Coursework:</h4>
+                      <ul className="text-sm text-gray-600 space-y-2">
+                        <li className="flex items-center">
+                          <div className="w-2 h-2 bg-indigo-500 rounded-full mr-3"></div>
+                          Data Structures & Algorithms
+                        </li>
+                        <li className="flex items-center">
+                          <div className="w-2 h-2 bg-purple-500 rounded-full mr-3"></div>
+                          Object-Oriented Programming
+                        </li>
+                        <li className="flex items-center">
+                          <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                          Database Management Systems
+                        </li>
+                        <li className="flex items-center">
+                          <div className="w-2 h-2 bg-teal-500 rounded-full mr-3"></div>
+                          Web Technologies
+                        </li>
                       </ul>
                     </div>
                     <div>
-                      <h4 className="font-medium text-gray-900 mb-2">Key Achievements:</h4>
-                      <ul className="text-sm text-gray-600 space-y-1">
-                        <li>• Consistent Academic Performance</li>
-                        <li>• Active in Technical Clubs</li>
-                        <li>• Project Team Leadership</li>
-                        <li>• Peer Programming Mentor</li>
+                      <h4 className="font-medium text-gray-900 mb-3">Key Achievements:</h4>
+                      <ul className="text-sm text-gray-600 space-y-2">
+                        <li className="flex items-center">
+                          <div className="w-2 h-2 bg-indigo-500 rounded-full mr-3"></div>
+                          Consistent Academic Performance
+                        </li>
+                        <li className="flex items-center">
+                          <div className="w-2 h-2 bg-purple-500 rounded-full mr-3"></div>
+                          Active in Technical Clubs
+                        </li>
+                        <li className="flex items-center">
+                          <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                          Project Team Leadership
+                        </li>
+                        <li className="flex items-center">
+                          <div className="w-2 h-2 bg-teal-500 rounded-full mr-3"></div>
+                          Peer Programming Mentor
+                        </li>
                       </ul>
                     </div>
                   </div>
@@ -405,16 +536,16 @@ function App() {
             {certifications.map((cert, index) => {
               const IconComponent = cert.icon;
               return (
-                <div key={index} className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-200">
+                <div key={index} className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-lg transition-all duration-200 group">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 mr-4">
-                      <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-teal-600 rounded-full flex items-center justify-center">
+                      <div className="w-12 h-12 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
                         <IconComponent size={20} className="text-white" />
                       </div>
                     </div>
                     <div className="flex-grow">
                       <h3 className="text-lg font-semibold text-gray-900 mb-1">{cert.title}</h3>
-                      <p className="text-blue-600 font-medium mb-1">{cert.issuer}</p>
+                      <p className="text-indigo-600 font-medium mb-1">{cert.issuer}</p>
                       <p className="text-sm text-gray-500">{cert.year}</p>
                     </div>
                   </div>
@@ -426,30 +557,30 @@ function App() {
       </section>
 
       {/* Extracurricular Section */}
-      <section id="extracurricular" className="py-16 bg-gray-50">
+      <section id="extracurricular" className="py-16 bg-gradient-to-br from-slate-50 to-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Extracurricular Activities</h2>
           <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-teal-600 rounded-full flex items-center justify-center mb-4">
+            <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-200 hover:shadow-lg transition-all duration-200 group">
+              <div className="w-12 h-12 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-200">
                 <Briefcase size={24} className="text-white" />
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Technical Club Participation</h3>
               <p className="text-gray-600 mb-4">Active member of the college coding club, organizing workshops and hackathons.</p>
-              <div className="text-sm text-blue-600 font-medium">Skills Developed: Leadership, Event Management</div>
+              <div className="text-sm text-indigo-600 font-medium">Skills Developed: Leadership, Event Management</div>
             </div>
             
-            <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-teal-600 rounded-full flex items-center justify-center mb-4">
+            <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-200 hover:shadow-lg transition-all duration-200 group">
+              <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-blue-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-200">
                 <Award size={24} className="text-white" />
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Sports & Athletics</h3>
               <p className="text-gray-600 mb-4">Represented college in inter-collegiate basketball tournaments and track events.</p>
-              <div className="text-sm text-blue-600 font-medium">Skills Developed: Teamwork, Discipline, Strategy</div>
+              <div className="text-sm text-purple-600 font-medium">Skills Developed: Teamwork, Discipline, Strategy</div>
             </div>
             
-            <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-teal-600 rounded-full flex items-center justify-center mb-4">
+            <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-200 hover:shadow-lg transition-all duration-200 group">
+              <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-teal-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-200">
                 <User size={24} className="text-white" />
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Community Service</h3>
@@ -474,32 +605,32 @@ function App() {
               
               <div className="space-y-4">
                 <div className="flex items-center">
-                  <Mail size={20} className="text-blue-600 mr-3" />
+                  <Mail size={20} className="text-indigo-600 mr-3" />
                   <span className="text-gray-600">avineshkumar.d@example.com</span>
                 </div>
                 <div className="flex items-center">
-                  <Linkedin size={20} className="text-blue-600 mr-3" />
-                  <a href="#" className="text-gray-600 hover:text-blue-600 transition-colors">
+                  <Linkedin size={20} className="text-indigo-600 mr-3" />
+                  <a href="#" className="text-gray-600 hover:text-indigo-600 transition-colors">
                     linkedin.com/in/avineshkumar
                   </a>
                 </div>
                 <div className="flex items-center">
-                  <Github size={20} className="text-blue-600 mr-3" />
-                  <a href="#" className="text-gray-600 hover:text-blue-600 transition-colors">
+                  <Github size={20} className="text-indigo-600 mr-3" />
+                  <a href="#" className="text-gray-600 hover:text-indigo-600 transition-colors">
                     github.com/avineshkumar
                   </a>
                 </div>
               </div>
 
               <div className="mt-8">
-                <button className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-teal-600 text-white font-medium rounded-lg hover:from-blue-700 hover:to-teal-700 transition-colors duration-200">
+                <button className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-medium rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl">
                   <Download size={20} className="mr-2" />
                   Download Resume
                 </button>
               </div>
             </div>
 
-            <div className="bg-gray-50 p-8 rounded-lg">
+            <div className="bg-gradient-to-br from-slate-50 to-gray-50 p-8 rounded-xl border border-gray-200">
               <form className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
@@ -508,7 +639,7 @@ function App() {
                   <input
                     type="text"
                     id="name"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all duration-200"
                     placeholder="Your full name"
                   />
                 </div>
@@ -519,7 +650,7 @@ function App() {
                   <input
                     type="email"
                     id="email"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all duration-200"
                     placeholder="your.email@example.com"
                   />
                 </div>
@@ -530,7 +661,7 @@ function App() {
                   <input
                     type="text"
                     id="subject"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all duration-200"
                     placeholder="What's this about?"
                   />
                 </div>
@@ -541,13 +672,13 @@ function App() {
                   <textarea
                     id="message"
                     rows={5}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent resize-none transition-all duration-200"
                     placeholder="Your message here..."
                   ></textarea>
                 </div>
                 <button
                   type="submit"
-                  className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-200"
+                  className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-3 px-6 rounded-lg font-medium hover:from-indigo-700 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl"
                 >
                   Send Message
                 </button>
