@@ -139,7 +139,6 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
             <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent">
-            <div className="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
               Avinesh Kumar D
             </div>
             
@@ -357,7 +356,7 @@ function App() {
               <div className="group bg-gradient-to-br from-teal-50 to-teal-100 p-6 rounded-xl hover:shadow-lg transition-all duration-200">
                 <div className="w-12 h-12 bg-gradient-to-br from-teal-500 to-teal-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-200">
                   <Award size={24} className="text-white" />
-                  </div>
+                </div>
                 <h4 className="font-semibold text-teal-700 mb-2">Leadership</h4>
                 <p className="text-sm text-gray-600">Natural initiative in guiding projects and mentoring fellow developers</p>
               </div>
