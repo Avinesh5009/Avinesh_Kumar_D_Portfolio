@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import AIChat from './components/AIChat';
 import { 
   Menu, 
   X, 
@@ -758,6 +759,9 @@ function App() {
           </div>
         </div>
       </footer>
+
+      {/* AI Chat Assistant */}
+      <AIChat isDarkMode={isDarkMode} />
     </div>
   );
 }
